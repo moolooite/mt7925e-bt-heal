@@ -1,0 +1,12 @@
+[Unit]
+Description=MT7925e Bluetooth Heal Service
+Documentation=https://github.com/astrophyllite/mt7925e-bt-heal
+After=network.target bluetooth.service
+Wants=bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mt7925e-bt-heal.sh
+
+[Install]
+WantedBy=multi-user.target
