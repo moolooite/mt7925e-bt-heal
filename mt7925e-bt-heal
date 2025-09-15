@@ -1,0 +1,6 @@
+#!/bin/bash
+# /usr/lib/systemd/system-sleep/mt7925e-bt-heal
+# Called by systemd-sleep on suspend/resume. We only act on "post" (after resume).
+if [ "$1" = "post" ]; then
+    /usr/bin/mt7925e-bt-heal.sh
+fi
