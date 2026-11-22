@@ -1,0 +1,12 @@
+[Unit]
+Description=MT7925e Bluetooth Heal Service
+Documentation=https://github.com/moolooite/mt7925e-bt-heal
+After=bluetooth.service
+Wants=bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mt7925e-bt-heal.sh
+
+[Install]
+WantedBy=multi-user.target
